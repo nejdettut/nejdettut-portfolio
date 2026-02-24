@@ -153,3 +153,51 @@
     }
   }
 }
+"Kurslar": {
+  "title": "Online Kurslar",
+  "description": "Python, yapay zeka ve web geliştirme alanlarında hazırladığım kapsamlı kurslar. Canlı dersler ve kayıtlı video içerikleriyle desteklenmiştir.",
+  "free": "Ücretsiz",
+  "studentCount": "öğrenci",
+  "livePlusRecorded": "Canlı + Kayıt",
+  "recordedOnly": "Sadece Kayıt",
+  "buttons": {
+    "startNow": "Hemen Başla",
+    "viewDetails": "Detayları Gör",
+    "contact": "İletişime Geç"
+  },
+  "loginRequired": "Kayıt olmak için giriş yapın",
+  "questions": {
+    "title": "Kurs Hakkında Sorularınız mı Var?",
+    "description": "Canlı dersler, kayıt süreci veya içerikler hakkında bilgi almak için iletişime geçin."
+  },
+  "courses": {
+    "pythonTemel": {
+      "title": "Python Temel",
+      "description": "Sıfırdan Python programlamaya giriş. Değişkenler, döngüler, fonksiyonlar ve temel veri yapıları.",
+      "level": "Başlangıç",
+      "duration": "8 Hafta",
+      "price": "₺1.499"
+    },
+    "pythonIleri": {
+      "title": "Python İleri Seviye",
+      "description": "OOP, dosya işlemleri, exception handling, modüller ve paketler.",
+      "level": "Orta",
+      "duration": "10 Hafta",
+      "price": "₺1.999"
+    },
+    "aiTemel": {
+      "title": "Yapay Zeka Temelleri",
+      "description": "Makine öğrenmesi, derin öğrenme ve AI uygulamalarına giriş. Python ile pratik projeler.",
+      "level": "İleri",
+      "duration": "12 Hafta",
+      "price": "₺2.499"
+    },
+    "webTemel": {
+      "title": "Web Geliştirme Temelleri",
+      "description": "HTML, CSS ve JavaScript ile modern web sayfaları oluşturma. Responsive tasarım prensipleri.",
+      "level": "Başlangıç",
+      "duration": "6 Hafta",
+      "price": "Ücretsiz"
+    }
+  }
+}
