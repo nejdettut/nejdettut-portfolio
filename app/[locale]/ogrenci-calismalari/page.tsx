@@ -9,9 +9,9 @@ import { Search, ExternalLink, Code, Palette, Gamepad2, Filter } from 'lucide-re
 import Link from 'next/link';
 
 // Static params (prerender için)
-export function generateStaticParams() {
-  return [{ locale: 'tr' }, { locale: 'en' }];
-}
+//export function generateStaticParams() {
+//  return [{ locale: 'tr' }, { locale: 'en' }];
+//}
 
 // Metadata (async)
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
