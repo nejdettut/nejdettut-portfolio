@@ -2,7 +2,22 @@ import { getTranslations } from 'next-intl/server';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BookOpen, Calendar, FileText, Video } from 'lucide-react';
+import { setRequestLocale } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 
+export function generateStaticParams() {
+  return [{ locale: 'tr' }, { locale: 'en' }]; // veya globalden al
+}
+
+export default async function DerslerPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+
+  setRequestLocale(locale); // KRİTİK satır – translations'dan ÖNCE çağır
+
+  const t = useTranslations('Dersler'); // veya getTranslations
+
+  return <h1>{t('title')}</h1>;
+}
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'metadata' });
   return {
