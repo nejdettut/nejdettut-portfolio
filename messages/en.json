@@ -31,3 +31,75 @@
     "rights": "All rights reserved."
   }
 }
+
+"Hakkimda": {
+  "name": "Nejdet Tut",
+  "title": "IT Teacher & EdTech Specialist Candidate",
+  "skills": {
+    "python": "Python",
+    "ai": "Artificial Intelligence",
+    "web": "Web Development",
+    "edtech": "Educational Technology",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "react": "React",
+    "nextjs": "Next.js",
+    "nodejs": "Node.js",
+    "htmlcss": "HTML/CSS",
+    "scratch": "Scratch",
+    "arduino": "Arduino",
+    "tensorflow": "TensorFlow",
+    "git": "Git",
+    "linux": "Linux"
+  },
+  "sections": {
+    "summary": {
+      "title": "Professional Summary",
+      "p1": "I currently serve as an IT teacher at a private primary school. At the same time, I work as a Python and Artificial Intelligence instructor at an IT training center. I am continuously improving myself with the goal of specializing in the EdTech field.",
+      "p2": "I use modern teaching methods and tools to develop my students' digital literacy skills and prepare them for the technologies of the future."
+    },
+    "experience": {
+      "title": "Experience",
+      "teacher": {
+        "title": "IT Teacher",
+        "period": "Private Primary School | 2021 – Present",
+        "items": {
+          "1": "IT classes for grades 1–4",
+          "2": "Coding education with Scratch",
+          "3": "Digital citizenship and internet safety"
+        }
+      },
+      "trainer": {
+        "title": "Python & AI Instructor",
+        "period": "IT Training Center | 2022 – Present",
+        "items": {
+          "1": "Python training for high school and university students",
+          "2": "Fundamentals of artificial intelligence and machine learning",
+          "3": "Project-based learning approach"
+        }
+      }
+    },
+    "education": {
+      "title": "Education",
+      "degree": "Computer and Instructional Technologies Teaching",
+      "period": "University Name | 2017 – 2021"
+    },
+    "skills": {
+      "title": "Technical Skills"
+    },
+    "certificates": {
+      "title": "Certificates",
+      "items": {
+        "1": "Google Certified Educator Level 1",
+        "2": "Python for Data Science – Coursera",
+        "3": "Machine Learning Fundamentals"
+      }
+    },
+    "audience": {
+      "title": "My Target Audiences",
+      "parents": "Parents (Primary school IT education)",
+      "students": "Students (Python & AI)",
+      "employers": "Employers (EdTech projects)"
+    }
+  }
+}
