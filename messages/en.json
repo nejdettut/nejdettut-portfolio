@@ -148,3 +148,51 @@
     }
   }
 }
+"Kurslar": {
+  "title": "Online Courses",
+  "description": "Comprehensive courses I have prepared in Python, artificial intelligence, and web development. Supported by live sessions and recorded video content.",
+  "free": "Free",
+  "studentCount": "students",
+  "livePlusRecorded": "Live + Recorded",
+  "recordedOnly": "Recorded Only",
+  "buttons": {
+    "startNow": "Start Now",
+    "viewDetails": "View Details",
+    "contact": "Get in Touch"
+  },
+  "loginRequired": "Login required to enroll",
+  "questions": {
+    "title": "Have Questions About the Courses?",
+    "description": "Feel free to contact me for information about live sessions, enrollment process, or course content."
+  },
+  "courses": {
+    "pythonTemel": {
+      "title": "Python Basics",
+      "description": "Introduction to Python programming from scratch. Variables, loops, functions, and basic data structures.",
+      "level": "Beginner",
+      "duration": "8 Weeks",
+      "price": "$149"
+    },
+    "pythonIleri": {
+      "title": "Advanced Python",
+      "description": "OOP, file operations, exception handling, modules, and packages.",
+      "level": "Intermediate",
+      "duration": "10 Weeks",
+      "price": "$199"
+    },
+    "aiTemel": {
+      "title": "AI Fundamentals",
+      "description": "Introduction to machine learning, deep learning, and AI applications. Practical projects with Python.",
+      "level": "Advanced",
+      "duration": "12 Weeks",
+      "price": "$249"
+    },
+    "webTemel": {
+      "title": "Web Development Basics",
+      "description": "Creating modern web pages with HTML, CSS, and JavaScript. Responsive design principles.",
+      "level": "Beginner",
+      "duration": "6 Weeks",
+      "price": "Free"
+    }
+  }
+}
