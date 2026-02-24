@@ -40,3 +40,35 @@ export default async function LocaleLayout({
     </html>
   );
 }
+
+import { setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/navigation'; // veya i18n.ts'den
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  // Validate locale
+  if (!routing.locales.includes(locale)) {
+    notFound();
+  }
+
+  // KRİTİK: Static rendering'i etkinleştir
+  setRequestLocale(locale);
+
+  return (
+    <html lang={locale}>
+      <body>{children}</body>
+    </html>
+  );
+}
