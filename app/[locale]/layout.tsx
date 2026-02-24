@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";  // ← setRequestLocale ekle
 import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/i18n";
 import { Inter } from "next/font/google";
@@ -20,9 +20,13 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  // Validate
   if (!locales.includes(locale as Locale)) {
     notFound();
   }
+
+  // KRİTİK: Static rendering'i etkinleştir (tüm alt sayfalar için)
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 
@@ -37,38 +41,6 @@ export default async function LocaleLayout({
           </div>
         </NextIntlClientProvider>
       </body>
-    </html>
-  );
-}
-
-import { setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { routing } from '@/navigation'; // veya i18n.ts'den
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
-
-export default async function RootLayout({
-  children,
-  params
-}: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-
-  // Validate locale
-  if (!routing.locales.includes(locale)) {
-    notFound();
-  }
-
-  // KRİTİK: Static rendering'i etkinleştir
-  setRequestLocale(locale);
-
-  return (
-    <html lang={locale}>
-      <body>{children}</body>
     </html>
   );
 }
