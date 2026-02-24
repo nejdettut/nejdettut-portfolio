@@ -5,14 +5,19 @@ export const locales = ['tr', 'en'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale = 'tr';
 
-export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale as Locale)) {
-    return notFound();
+// messages/request.ts veya i18n/request.ts
+import { routing } from './routing'; // veya navigation.ts
+
+export default getRequestConfig(async ({ requestLocale }) => {
+  let locale = await requestLocale;
+
+  // Validate
+  if (!routing.locales.includes(locale)) {
+    locale = routing.defaultLocale; // 'tr'
   }
 
   return {
-    messages: (await import(`./messages/${locale}.json`)).default,
-    timeZone: 'Europe/Istanbul',
-    now: new Date(),
+    locale,
+    messages: (await import(`../messages/${locale}.json`)).default
   };
 });
