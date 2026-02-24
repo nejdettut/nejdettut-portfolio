@@ -5,9 +5,9 @@ import { Badge } from '@/components/ui/badge';
 import { GraduationCap, Briefcase, Award, Code, BookOpen, Users } from 'lucide-react';
 
 // Static params – build sırasında tr/en için prerender
-export function generateStaticParams() {
-  return [{ locale: 'tr' }, { locale: 'en' }];
-}
+//export function generateStaticParams() {
+//  return [{ locale: 'tr' }, { locale: 'en' }];
+//}
 
 // Metadata (async ve locale'a bağlı)
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
