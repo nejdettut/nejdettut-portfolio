@@ -7,9 +7,9 @@ import { Label } from '@/components/ui/label';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 // Static params – tr/en için prerender
-export function generateStaticParams() {
-  return [{ locale: 'tr' }, { locale: 'en' }];
-}
+//export function generateStaticParams() {
+//  return [{ locale: 'tr' }, { locale: 'en' }];
+//}
 
 // Metadata (async ve locale'a bağlı)
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
