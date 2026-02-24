@@ -5,8 +5,13 @@ export const locales = ['tr', 'en'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale = 'tr';
 
-// messages/request.ts veya i18n/request.ts
-import { routing } from './routing'; // veya navigation.ts
+import { routing } from './routing'; 
+
+export const routing = {
+  locales: ['tr', 'en'],
+  defaultLocale: 'tr'
+};
+
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
