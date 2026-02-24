@@ -5,9 +5,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BookOpen, Calendar, FileText, Video } from 'lucide-react';
 
 // Static params – globalden gelebilir, hardcoded da olur
-export function generateStaticParams() {
-  return [{ locale: 'tr' }, { locale: 'en' }];
-}
+//export function generateStaticParams() {
+//  return [{ locale: 'tr' }, { locale: 'en' }];
+//}
 
 export default async function DerslerPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
