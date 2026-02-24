@@ -1,203 +1,21 @@
-// messages/tr.json
-{
-  "Giris": {
-    "title": "Giriş Yap",
-    "description": "Hesabınıza giriş yaparak kurslara ve projelere erişin",
-    "tabs": {
-      "email": "E-posta",
-      "kod": "Sınıf Kodu"
-    },
-    "email": {
-      "title": "E-posta ile Giriş",
-      "description": "Lise, üniversite öğrencileri ve yetişkinler için",
-      "label": "E-posta",
-      "placeholder": "ornek@email.com",
-      "passwordLabel": "Şifre"
-    },
-    "kod": {
-      "title": "Sınıf Kodu ile Giriş",
-      "description": "İlkokul öğrencileri için (e-posta gerektirmez)",
-      "sinifKoduLabel": "Sınıf Kodu",
-      "sinifKoduPlaceholder": "Örn: BIL-5A",
-      "sinifKoduInfo": "Öğretmeninizden aldığınız kodu girin",
-      "ogrenciNoLabel": "Öğrenci Numarası",
-      "ogrenciNoPlaceholder": "Örn: 12",
-      "adSoyadLabel": "Ad Soyad",
-      "adSoyadPlaceholder": "Ahmet Yılmaz",
-      "infoTitle": "Bilgi",
-      "infoText": "Bu giriş yöntemi sadece ilkokul öğrencileri içindir. Sınıf kodunuzu ve öğrenci numaranızı öğretmeninizden alabilirsiniz."
-    },
-    "buttons": {
-      "login": "Giriş Yap"
-    },
-    "noAccount": "Hesabınız yok mu?",
-    "registerLink": "Kayıt Ol"
-  }
-}
-
-// messages/tr.json (mevcut Türkçe'leri buraya ekle)
-{
-  "Hakkimda": {
-    "name": "Nejdet Tut",
-    "title": "Bilişim Teknolojileri Öğretmeni & EdTech Uzmanı Adayı",
-    "skills": {
-      "python": "Python",
-      "ai": "Yapay Zeka",
-      "web": "Web Geliştirme",
-      "edtech": "Eğitim Teknolojileri",
-      "javascript": "JavaScript",
-      "typescript": "TypeScript",
-      "react": "React",
-      "nextjs": "Next.js",
-      "nodejs": "Node.js",
-      "htmlcss": "HTML/CSS",
-      "scratch": "Scratch",
-      "arduino": "Arduino",
-      "tensorflow": "TensorFlow",
-      "git": "Git",
-      "linux": "Linux"
-    },
-    "sections": {
-      "summary": {
-        "title": "Profesyonel Özet",
-        "p1": "Özel bir ilkokulda bilişim teknolojileri öğretmeni olarak görev yapıyorum. Aynı zamanda bir IT eğitim merkezinde Python ve yapay zeka eğitmenliği yapıyorum. EdTech alanında uzmanlaşma hedefiyle kendimi sürekli geliştiriyorum.",
-        "p2": "Öğrencilerimin dijital okuryazarlık becerilerini geliştirmek, onları geleceğin teknolojilerine hazırlamak için modern eğitim yöntemleri ve araçları kullanıyorum."
-      },
-      "experience": {
-        "title": "Deneyim",
-        "teacher": {
-          "title": "Bilişim Teknolojileri Öğretmeni",
-          "period": "Özel İlkokul | 2021 - Günümüz",
-          "items": {
-            "1": "1-4. sınıf bilişim teknolojileri dersleri",
-            "2": "Scratch ile kodlama eğitimi",
-            "3": "Dijital vatandaşlık ve internet güvenliği"
-          }
-        },
-        "trainer": {
-          "title": "Python & AI Eğitmeni",
-          "period": "IT Eğitim Merkezi | 2022 - Günümüz",
-          "items": {
-            "1": "Lise ve üniversite öğrencilerine Python",
-            "2": "Yapay zeka ve makine öğrenmesi temelleri",
-            "3": "Proje tabanlı öğrenme"
-          }
-        }
-      },
-      "education": {
-        "title": "Eğitim",
-        "degree": "Bilgisayar ve Öğretim Teknolojileri Öğretmenliği",
-        "period": "Üniversite Adı | 2017 - 2021"
-      },
-      "skills": {
-        "title": "Teknik Yetenekler"
-      },
-      "certificates": {
-        "title": "Sertifikalar",
-        "items": {
-          "1": "Google Certified Educator Level 1",
-          "2": "Python for Data Science - Coursera",
-          "3": "Machine Learning Fundamentals"
-        }
-      },
-      "audience": {
-        "title": "Hedef Kitlelerim",
-        "parents": "Veliler (İlkokul IT eğitimi)",
-        "students": "Öğrenciler (Python & AI)",
-        "employers": "İşverenler (EdTech projeleri)"
-      }
-    }
-  }
-}
-"Iletisim": {
-  "title": "İletişim",
-  "description": "Kurslar, eğitimler veya işbirlikleri hakkında benimle iletişime geçebilirsiniz.",
-  "form": {
-    "title": "Bize Ulaşın",
-    "name": {
-      "label": "Ad",
-      "placeholder": "Adınız"
-    },
-    "surname": {
-      "label": "Soyad",
-      "placeholder": "Soyadınız"
-    },
-    "email": {
-      "label": "E-posta",
-      "placeholder": "ornek@email.com"
-    },
-    "subject": {
-      "label": "Konu",
-      "placeholder": "Mesaj konusu"
-    },
-    "message": {
-      "label": "Mesaj",
-      "placeholder": "Mesajınızı yazın..."
-    },
-    "submit": "Gönder"
+"OgrenciCalismalari": {
+  "title": "Öğrenci Çalışmaları",
+  "description": "Öğrencilerimin kodlama, dijital sanat ve robotik alanlarında yaptığı projeler. Her öğrenci projesi onay sürecinden geçmektedir.",
+  "searchPlaceholder": "Proje veya öğrenci ara...",
+  "categories": {
+    "all": "Tümü",
+    "scratch": "Scratch",
+    "web": "Web",
+    "robotik": "Robotik",
+    "dijitalSanat": "Dijital Sanat"
   },
-  "contact": {
-    "email": {
-      "title": "E-posta",
-      "address1": "info@nejdettut.com",
-      "address2": "kurs@nejdettut.com"
-    },
-    "phone": {
-      "title": "Telefon",
-      "number": "+90 5XX XXX XX XX",
-      "hours": "Hafta içi 09:00 - 18:00"
-    },
-    "address": {
-      "title": "Adres",
-      "description": "Online eğitimler için her yerden erişim sağlayabilirsiniz."
-    }
-  }
-}
-"Kurslar": {
-  "title": "Online Kurslar",
-  "description": "Python, yapay zeka ve web geliştirme alanlarında hazırladığım kapsamlı kurslar. Canlı dersler ve kayıtlı video içerikleriyle desteklenmiştir.",
-  "free": "Ücretsiz",
-  "studentCount": "öğrenci",
-  "livePlusRecorded": "Canlı + Kayıt",
-  "recordedOnly": "Sadece Kayıt",
   "buttons": {
-    "startNow": "Hemen Başla",
-    "viewDetails": "Detayları Gör",
-    "contact": "İletişime Geç"
+    "inspect": "İncele",
+    "upload": "Proje Yükle"
   },
-  "loginRequired": "Kayıt olmak için giriş yapın",
-  "questions": {
-    "title": "Kurs Hakkında Sorularınız mı Var?",
-    "description": "Canlı dersler, kayıt süreci veya içerikler hakkında bilgi almak için iletişime geçin."
-  },
-  "courses": {
-    "pythonTemel": {
-      "title": "Python Temel",
-      "description": "Sıfırdan Python programlamaya giriş. Değişkenler, döngüler, fonksiyonlar ve temel veri yapıları.",
-      "level": "Başlangıç",
-      "duration": "8 Hafta",
-      "price": "₺1.499"
-    },
-    "pythonIleri": {
-      "title": "Python İleri Seviye",
-      "description": "OOP, dosya işlemleri, exception handling, modüller ve paketler.",
-      "level": "Orta",
-      "duration": "10 Hafta",
-      "price": "₺1.999"
-    },
-    "aiTemel": {
-      "title": "Yapay Zeka Temelleri",
-      "description": "Makine öğrenmesi, derin öğrenme ve AI uygulamalarına giriş. Python ile pratik projeler.",
-      "level": "İleri",
-      "duration": "12 Hafta",
-      "price": "₺2.499"
-    },
-    "webTemel": {
-      "title": "Web Geliştirme Temelleri",
-      "description": "HTML, CSS ve JavaScript ile modern web sayfaları oluşturma. Responsive tasarım prensipleri.",
-      "level": "Başlangıç",
-      "duration": "6 Hafta",
-      "price": "Ücretsiz"
-    }
+  "noProjects": "Henüz bu kategoride onaylı proje bulunmuyor.",
+  "share": {
+    "title": "Projenizi Paylaşın",
+    "description": "Öğrenciler projelerini yükleyebilir, onaylandıktan sonra burada yayınlanır."
   }
 }
