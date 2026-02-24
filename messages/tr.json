@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "Nejdet Tut - Bilişim Öğretmeni & EdTech Uzmanı",
+    "description": "Özel ilkokul bilişim teknolojileri öğretmeni, Python ve AI eğitmeni. Online kurslar, öğrenci projeleri ve eğitim teknolojileri."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "classes": "Dersler",
+    "courses": "Kurslar",
+    "studentWorks": "Öğrenci Çalışmaları",
+    "projects": "Projelerim",
+    "apps": "Uygulamalar",
+    "blog": "Blog",
+    "contact": "İletişim",
+    "login": "Giriş Yap"
+  },
+  "hero": {
+    "title": "Geleceği Kodlayan Nesiller Yetiştiriyorum",
+    "subtitle": "Özel ilkokuldan üniversiteye, her yaş grubuna özel bilişim teknolojileri ve programlama eğitimleri",
+    "ctaPrimary": "Kursları Keşfet",
+    "ctaSecondary": "Öğrenci Projelerini Gör"
+  },
+  "quickAccess": {
+    "title": "Hızlı Erişim",
+    "forParents": "Veliler İçin",
+    "forStudents": "Öğrenciler İçin",
+    "forEmployers": "İşverenler İçin"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  }
+}

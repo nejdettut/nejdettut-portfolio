@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "title": "Nejdet Tut - IT Teacher & EdTech Specialist",
+    "description": "Private primary school IT teacher, Python and AI instructor. Online courses, student projects, and educational technologies."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "classes": "Classes",
+    "courses": "Courses",
+    "studentWorks": "Student Works",
+    "projects": "My Projects",
+    "apps": "Apps",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "Raising Generations That Code the Future",
+    "subtitle": "Customized IT and programming education for all age groups, from private primary school to university",
+    "ctaPrimary": "Explore Courses",
+    "ctaSecondary": "View Student Projects"
+  },
+  "quickAccess": {
+    "title": "Quick Access",
+    "forParents": "For Parents",
+    "forStudents": "For Students",
+    "forEmployers": "For Employers"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
