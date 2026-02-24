@@ -1,33 +1,36 @@
+// messages/tr.json
 {
-  "metadata": {
-    "title": "Nejdet Tut - Bilişim Öğretmeni & EdTech Uzmanı",
-    "description": "Özel ilkokul bilişim teknolojileri öğretmeni, Python ve AI eğitmeni. Online kurslar, öğrenci projeleri ve eğitim teknolojileri."
-  },
-  "nav": {
-    "home": "Ana Sayfa",
-    "about": "Hakkımda",
-    "classes": "Dersler",
-    "courses": "Kurslar",
-    "studentWorks": "Öğrenci Çalışmaları",
-    "projects": "Projelerim",
-    "apps": "Uygulamalar",
-    "blog": "Blog",
-    "contact": "İletişim",
-    "login": "Giriş Yap"
-  },
-  "hero": {
-    "title": "Geleceği Kodlayan Nesiller Yetiştiriyorum",
-    "subtitle": "Özel ilkokuldan üniversiteye, her yaş grubuna özel bilişim teknolojileri ve programlama eğitimleri",
-    "ctaPrimary": "Kursları Keşfet",
-    "ctaSecondary": "Öğrenci Projelerini Gör"
-  },
-  "quickAccess": {
-    "title": "Hızlı Erişim",
-    "forParents": "Veliler İçin",
-    "forStudents": "Öğrenciler İçin",
-    "forEmployers": "İşverenler İçin"
-  },
-  "footer": {
-    "rights": "Tüm hakları saklıdır."
+  "Giris": {
+    "title": "Giriş Yap",
+    "description": "Hesabınıza giriş yaparak kurslara ve projelere erişin",
+    "tabs": {
+      "email": "E-posta",
+      "kod": "Sınıf Kodu"
+    },
+    "email": {
+      "title": "E-posta ile Giriş",
+      "description": "Lise, üniversite öğrencileri ve yetişkinler için",
+      "label": "E-posta",
+      "placeholder": "ornek@email.com",
+      "passwordLabel": "Şifre"
+    },
+    "kod": {
+      "title": "Sınıf Kodu ile Giriş",
+      "description": "İlkokul öğrencileri için (e-posta gerektirmez)",
+      "sinifKoduLabel": "Sınıf Kodu",
+      "sinifKoduPlaceholder": "Örn: BIL-5A",
+      "sinifKoduInfo": "Öğretmeninizden aldığınız kodu girin",
+      "ogrenciNoLabel": "Öğrenci Numarası",
+      "ogrenciNoPlaceholder": "Örn: 12",
+      "adSoyadLabel": "Ad Soyad",
+      "adSoyadPlaceholder": "Ahmet Yılmaz",
+      "infoTitle": "Bilgi",
+      "infoText": "Bu giriş yöntemi sadece ilkokul öğrencileri içindir. Sınıf kodunuzu ve öğrenci numaranızı öğretmeninizden alabilirsiniz."
+    },
+    "buttons": {
+      "login": "Giriş Yap"
+    },
+    "noAccount": "Hesabınız yok mu?",
+    "registerLink": "Kayıt Ol"
   }
 }
