@@ -5,7 +5,7 @@
   },
   "nav": {
     "home": "Home",
-    "about": "About",
+    "about": "About Me",
     "classes": "Classes",
     "courses": "Courses",
     "studentWorks": "Student Works",
@@ -17,7 +17,7 @@
   },
   "hero": {
     "title": "Raising Generations That Code the Future",
-    "subtitle": "Customized IT and programming education for all age groups, from private primary school to university",
+    "subtitle": "Tailored IT and programming education for all ages – from private primary school to university level",
     "ctaPrimary": "Explore Courses",
     "ctaSecondary": "View Student Projects"
   },
