@@ -34,3 +34,78 @@
     "registerLink": "Kayıt Ol"
   }
 }
+
+// messages/tr.json (mevcut Türkçe'leri buraya ekle)
+{
+  "Hakkimda": {
+    "name": "Nejdet Tut",
+    "title": "Bilişim Teknolojileri Öğretmeni & EdTech Uzmanı Adayı",
+    "skills": {
+      "python": "Python",
+      "ai": "Yapay Zeka",
+      "web": "Web Geliştirme",
+      "edtech": "Eğitim Teknolojileri",
+      "javascript": "JavaScript",
+      "typescript": "TypeScript",
+      "react": "React",
+      "nextjs": "Next.js",
+      "nodejs": "Node.js",
+      "htmlcss": "HTML/CSS",
+      "scratch": "Scratch",
+      "arduino": "Arduino",
+      "tensorflow": "TensorFlow",
+      "git": "Git",
+      "linux": "Linux"
+    },
+    "sections": {
+      "summary": {
+        "title": "Profesyonel Özet",
+        "p1": "Özel bir ilkokulda bilişim teknolojileri öğretmeni olarak görev yapıyorum. Aynı zamanda bir IT eğitim merkezinde Python ve yapay zeka eğitmenliği yapıyorum. EdTech alanında uzmanlaşma hedefiyle kendimi sürekli geliştiriyorum.",
+        "p2": "Öğrencilerimin dijital okuryazarlık becerilerini geliştirmek, onları geleceğin teknolojilerine hazırlamak için modern eğitim yöntemleri ve araçları kullanıyorum."
+      },
+      "experience": {
+        "title": "Deneyim",
+        "teacher": {
+          "title": "Bilişim Teknolojileri Öğretmeni",
+          "period": "Özel İlkokul | 2021 - Günümüz",
+          "items": {
+            "1": "1-4. sınıf bilişim teknolojileri dersleri",
+            "2": "Scratch ile kodlama eğitimi",
+            "3": "Dijital vatandaşlık ve internet güvenliği"
+          }
+        },
+        "trainer": {
+          "title": "Python & AI Eğitmeni",
+          "period": "IT Eğitim Merkezi | 2022 - Günümüz",
+          "items": {
+            "1": "Lise ve üniversite öğrencilerine Python",
+            "2": "Yapay zeka ve makine öğrenmesi temelleri",
+            "3": "Proje tabanlı öğrenme"
+          }
+        }
+      },
+      "education": {
+        "title": "Eğitim",
+        "degree": "Bilgisayar ve Öğretim Teknolojileri Öğretmenliği",
+        "period": "Üniversite Adı | 2017 - 2021"
+      },
+      "skills": {
+        "title": "Teknik Yetenekler"
+      },
+      "certificates": {
+        "title": "Sertifikalar",
+        "items": {
+          "1": "Google Certified Educator Level 1",
+          "2": "Python for Data Science - Coursera",
+          "3": "Machine Learning Fundamentals"
+        }
+      },
+      "audience": {
+        "title": "Hedef Kitlelerim",
+        "parents": "Veliler (İlkokul IT eğitimi)",
+        "students": "Öğrenciler (Python & AI)",
+        "employers": "İşverenler (EdTech projeleri)"
+      }
+    }
+  }
+}
