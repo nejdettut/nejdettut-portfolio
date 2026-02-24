@@ -1,12 +1,26 @@
 'use client';
-
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';  // Client-side çeviri için
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, ExternalLink, Code, Palette, Gamepad2, Filter } from 'lucide-react';
 import Link from 'next/link';
+
+// Static params (prerender için)
+export function generateStaticParams() {
+  return [{ locale: 'tr' }, { locale: 'en' }];
+}
+
+// Metadata (async)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: `Öğrenci Çalışmaları | ${t('title')}`,
+  };
+}
 
 const ornekProjeler = [
   {
@@ -55,21 +69,25 @@ const ornekProjeler = [
   }
 ];
 
-const kategoriler = [
-  { id: 'tumu', label: 'Tümü', icon: Filter },
-  { id: 'scratch', label: 'Scratch', icon: Gamepad2 },
-  { id: 'web', label: 'Web', icon: Code },
-  { id: 'robotik', label: 'Robotik', icon: Code },
-  { id: 'dijital-sanat', label: 'Dijital Sanat', icon: Palette }
-];
+export default function OgrenciCalismalariPage() {
+  const t = useTranslations('OgrenciCalismalari'); // messages/...json'da 'OgrenciCalismalari' namespace'i
 
-export default function StudentWorksPage() {
   const [arama, setArama] = useState('');
   const [aktifKategori, setAktifKategori] = useState('tumu');
 
+  // Kategoriler de çeviriye taşındı
+  const kategoriler = [
+    { id: 'tumu', label: t('categories.all'), icon: Filter },
+    { id: 'scratch', label: t('categories.scratch'), icon: Gamepad2 },
+    { id: 'web', label: t('categories.web'), icon: Code },
+    { id: 'robotik', label: t('categories.robotik'), icon: Code },
+    { id: 'dijital-sanat', label: t('categories.dijitalSanat'), icon: Palette }
+  ];
+
   const filtrelenmisProjeler = ornekProjeler.filter(proje => {
-    const aramaUyumu = proje.baslik.toLowerCase().includes(arama.toLowerCase()) ||
-                      proje.ogrenci.toLowerCase().includes(arama.toLowerCase());
+    const aramaUyumu =
+      proje.baslik.toLowerCase().includes(arama.toLowerCase()) ||
+      proje.ogrenci.toLowerCase().includes(arama.toLowerCase());
     const kategoriUyumu = aktifKategori === 'tumu' || proje.kategori === aktifKategori;
     return aramaUyumu && kategoriUyumu && proje.onayli;
   });
@@ -77,10 +95,9 @@ export default function StudentWorksPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Öğrenci Çalışmaları</h1>
+        <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Öğrencilerimin kodlama, dijital sanat ve robotik alanlarında yaptığı projeler. 
-          Her öğrenci projesi onay sürecinden geçmektedir.
+          {t('description')}
         </p>
       </div>
 
@@ -88,12 +105,13 @@ export default function StudentWorksPage() {
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="Proje veya öğrenci ara..."
+            placeholder={t('searchPlaceholder')}
             value={arama}
             onChange={(e) => setArama(e.target.value)}
             className="pl-10"
           />
         </div>
+
         <div className="flex gap-2 overflow-x-auto pb-2">
           {kategoriler.map((kat) => (
             <Button
@@ -129,7 +147,7 @@ export default function StudentWorksPage() {
                 <span className="text-sm font-medium">{proje.ogrenci}</span>
                 <Button variant="ghost" size="sm" asChild>
                   <Link href={`/ogrenci-calismalari/${proje.id}`} className="gap-1">
-                    İncele <ExternalLink className="h-3 w-3" />
+                    {t('buttons.inspect')} <ExternalLink className="h-3 w-3" />
                   </Link>
                 </Button>
               </div>
@@ -140,20 +158,20 @@ export default function StudentWorksPage() {
 
       {filtrelenmisProjeler.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-muted-foreground">Henüz bu kategoride onaylı proje bulunmuyor.</p>
+          <p className="text-muted-foreground">{t('noProjects')}</p>
         </div>
       )}
 
       <Card className="mt-12 bg-gradient-to-r from-primary/5 to-secondary/5">
         <CardContent className="p-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
-            <h3 className="font-semibold text-lg">Projenizi Paylaşın</h3>
+            <h3 className="font-semibold text-lg">{t('share.title')}</h3>
             <p className="text-sm text-muted-foreground">
-              Öğrenciler projelerini yükleyebilir, onaylandıktan sonra burada yayınlanır.
+              {t('share.description')}
             </p>
           </div>
           <Button asChild>
-            <Link href="/ogrenci-calismalari/yukle">Proje Yükle</Link>
+            <Link href="/ogrenci-calismalari/yukle">{t('buttons.upload')}</Link>
           </Button>
         </CardContent>
       </Card>
