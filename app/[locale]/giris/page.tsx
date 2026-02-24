@@ -9,9 +9,9 @@ import { Label } from '@/components/ui/label';
 import { GraduationCap, Users, Mail, Lock, Key } from 'lucide-react';
 
 // Static params (build sırasında prerender için)
-export function generateStaticParams() {
-  return [{ locale: 'tr' }, { locale: 'en' }];
-}
+//export function generateStaticParams() {
+//  return [{ locale: 'tr' }, { locale: 'en' }];
+//}
 
 export default function LoginPage() {
   // Client-side translations
