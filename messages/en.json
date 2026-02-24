@@ -27,172 +27,286 @@
     "forStudents": "For Students",
     "forEmployers": "For Employers"
   },
-  "footer": {
-    "rights": "All rights reserved."
-  }
-}
-
-"Hakkimda": {
-  "name": "Nejdet Tut",
-  "title": "IT Teacher & EdTech Specialist Candidate",
-  "skills": {
-    "python": "Python",
-    "ai": "Artificial Intelligence",
-    "web": "Web Development",
-    "edtech": "Educational Technology",
-    "javascript": "JavaScript",
-    "typescript": "TypeScript",
-    "react": "React",
-    "nextjs": "Next.js",
-    "nodejs": "Node.js",
-    "htmlcss": "HTML/CSS",
-    "scratch": "Scratch",
-    "arduino": "Arduino",
-    "tensorflow": "TensorFlow",
-    "git": "Git",
-    "linux": "Linux"
-  },
-  "sections": {
-    "summary": {
-      "title": "Professional Summary",
-      "p1": "I currently serve as an IT teacher at a private primary school. At the same time, I work as a Python and Artificial Intelligence instructor at an IT training center. I am continuously improving myself with the goal of specializing in the EdTech field.",
-      "p2": "I use modern teaching methods and tools to develop my students' digital literacy skills and prepare them for the technologies of the future."
+  "Hakkimda": {
+    "name": "Nejdet Tut",
+    "title": "IT Teacher & EdTech Specialist Candidate",
+    "skills": {
+      "python": "Python",
+      "ai": "Artificial Intelligence",
+      "web": "Web Development",
+      "edtech": "Educational Technology",
+      "javascript": "JavaScript",
+      "typescript": "TypeScript",
+      "react": "React",
+      "nextjs": "Next.js",
+      "nodejs": "Node.js",
+      "htmlcss": "HTML/CSS",
+      "scratch": "Scratch",
+      "arduino": "Arduino",
+      "tensorflow": "TensorFlow",
+      "git": "Git",
+      "linux": "Linux"
     },
-    "experience": {
-      "title": "Experience",
-      "teacher": {
-        "title": "IT Teacher",
-        "period": "Private Primary School | 2021 – Present",
-        "items": {
-          "1": "IT classes for grades 1–4",
-          "2": "Coding education with Scratch",
-          "3": "Digital citizenship and internet safety"
+    "sections": {
+      "summary": {
+        "title": "Professional Summary",
+        "p1": "I currently serve as an IT teacher at a private primary school. At the same time, I work as a Python and Artificial Intelligence instructor at an IT training center. I am continuously improving myself with the goal of specializing in the EdTech field.",
+        "p2": "I use modern teaching methods and tools to develop my students' digital literacy skills and prepare them for the technologies of the future."
+      },
+      "experience": {
+        "title": "Experience",
+        "teacher": {
+          "title": "IT Teacher",
+          "period": "Private Primary School | 2021 – Present",
+          "items": {
+            "1": "IT classes for grades 1–4",
+            "2": "Coding education with Scratch",
+            "3": "Digital citizenship and internet safety"
+          }
+        },
+        "trainer": {
+          "title": "Python & AI Instructor",
+          "period": "IT Training Center | 2022 – Present",
+          "items": {
+            "1": "Python training for high school and university students",
+            "2": "Fundamentals of artificial intelligence and machine learning",
+            "3": "Project-based learning approach"
+          }
         }
       },
-      "trainer": {
-        "title": "Python & AI Instructor",
-        "period": "IT Training Center | 2022 – Present",
+      "education": {
+        "title": "Education",
+        "degree": "Computer and Instructional Technologies Teaching",
+        "period": "University Name | 2017 – 2021"
+      },
+      "skills": {
+        "title": "Technical Skills"
+      },
+      "certificates": {
+        "title": "Certificates",
         "items": {
-          "1": "Python training for high school and university students",
-          "2": "Fundamentals of artificial intelligence and machine learning",
-          "3": "Project-based learning approach"
+          "1": "Google Certified Educator Level 1",
+          "2": "Python for Data Science – Coursera",
+          "3": "Machine Learning Fundamentals"
+        }
+      },
+      "audience": {
+        "title": "My Target Audiences",
+        "parents": "Parents (Primary school IT education)",
+        "students": "Students (Python & AI)",
+        "employers": "Employers (EdTech projects)"
+      }
+    }
+  },
+  "Dersler": {
+    "title": "Primary School IT Classes",
+    "description": "Curriculum, activities, and parent information for the IT classes I teach at our private primary school.",
+    "bilisimTeknolojileri": "Information Technologies",
+    "topics": {
+      "title": "Topics Covered"
+    },
+    "info": {
+      "weeklyHours": "2 hours per week",
+      "weeklyHoursDesc": "Class hours",
+      "projectBased": "Project-based",
+      "projectBasedDesc": "Learning model",
+      "digitalMaterials": "Digital materials",
+      "digitalMaterialsDesc": "Educational content"
+    },
+    "parents": {
+      "title": "Information for Parents",
+      "description": "You can follow your child's progress in IT classes through the e-school system or contact me directly. At the end of each term, each student's digital portfolio is prepared."
+    },
+    "classes": {
+      "1sinif": {
+        "name": "Grade 1",
+        "description": "Computer recognition and basic usage skills",
+        "topics": {
+          "1": "Computer parts",
+          "2": "Keyboard usage",
+          "3": "Paint application",
+          "4": "Internet safety"
+        }
+      },
+      "2sinif": {
+        "name": "Grade 2",
+        "description": "Basic digital skills and creative applications",
+        "topics": {
+          "1": "WordPad usage",
+          "2": "Image editing",
+          "3": "Story writing",
+          "4": "Game design"
+        }
+      },
+      "3sinif": {
+        "name": "Grade 3",
+        "description": "Scratch introduction and algorithm basics",
+        "topics": {
+          "1": "Scratch interface",
+          "2": "Character movement",
+          "3": "Loops",
+          "4": "Game programming"
+        }
+      },
+      "4sinif": {
+        "name": "Grade 4",
+        "description": "Advanced Scratch and web basics",
+        "topics": {
+          "1": "Scratch projects",
+          "2": "HTML basics",
+          "3": "Web page design",
+          "4": "Robotics introduction"
         }
       }
+    }
+  },
+  "Kurslar": {
+    "title": "Online Courses",
+    "description": "Comprehensive courses I have prepared in Python, artificial intelligence, and web development. Supported by live sessions and recorded video content.",
+    "free": "Free",
+    "studentCount": "students",
+    "livePlusRecorded": "Live + Recorded",
+    "recordedOnly": "Recorded Only",
+    "buttons": {
+      "startNow": "Start Now",
+      "viewDetails": "View Details",
+      "contact": "Get in Touch"
     },
-    "education": {
-      "title": "Education",
-      "degree": "Computer and Instructional Technologies Teaching",
-      "period": "University Name | 2017 – 2021"
+    "loginRequired": "Login required to enroll",
+    "questions": {
+      "title": "Have Questions About the Courses?",
+      "description": "Feel free to contact me for information about live sessions, enrollment process, or course content."
     },
-    "skills": {
-      "title": "Technical Skills"
-    },
-    "certificates": {
-      "title": "Certificates",
-      "items": {
-        "1": "Google Certified Educator Level 1",
-        "2": "Python for Data Science – Coursera",
-        "3": "Machine Learning Fundamentals"
+    "courses": {
+      "pythonTemel": {
+        "title": "Python Basics",
+        "description": "Introduction to Python programming from scratch. Variables, loops, functions, and basic data structures.",
+        "level": "Beginner",
+        "duration": "8 Weeks",
+        "price": "$149"
+      },
+      "pythonIleri": {
+        "title": "Advanced Python",
+        "description": "OOP, file operations, exception handling, modules, and packages.",
+        "level": "Intermediate",
+        "duration": "10 Weeks",
+        "price": "$199"
+      },
+      "aiTemel": {
+        "title": "AI Fundamentals",
+        "description": "Introduction to machine learning, deep learning, and AI applications. Practical projects with Python.",
+        "level": "Advanced",
+        "duration": "12 Weeks",
+        "price": "$249"
+      },
+      "webTemel": {
+        "title": "Web Development Basics",
+        "description": "Creating modern web pages with HTML, CSS, and JavaScript. Responsive design principles.",
+        "level": "Beginner",
+        "duration": "6 Weeks",
+        "price": "Free"
       }
-    },
-    "audience": {
-      "title": "My Target Audiences",
-      "parents": "Parents (Primary school IT education)",
-      "students": "Students (Python & AI)",
-      "employers": "Employers (EdTech projects)"
     }
-  }
-}
-
-"Iletisim": {
-  "title": "Contact",
-  "description": "Feel free to reach out regarding courses, training sessions, or potential collaborations.",
-  "form": {
-    "title": "Get in Touch",
-    "name": {
-      "label": "First Name",
-      "placeholder": "Your First Name"
+  },
+  "OgrenciCalismalari": {
+    "title": "Student Works",
+    "description": "Projects created by my students in coding, digital art, and robotics. Every student project goes through an approval process.",
+    "searchPlaceholder": "Search by project or student...",
+    "categories": {
+      "all": "All",
+      "scratch": "Scratch",
+      "web": "Web",
+      "robotik": "Robotics",
+      "dijitalSanat": "Digital Art"
     },
-    "surname": {
-      "label": "Last Name",
-      "placeholder": "Your Last Name"
+    "buttons": {
+      "inspect": "View",
+      "upload": "Upload Project"
+    },
+    "noProjects": "No approved projects found in this category yet.",
+    "share": {
+      "title": "Share Your Project",
+      "description": "Students can upload their projects, and they will be published here after approval."
+    }
+  },
+  "Iletisim": {
+    "title": "Contact",
+    "description": "Feel free to reach out regarding courses, training sessions, or potential collaborations.",
+    "form": {
+      "title": "Get in Touch",
+      "name": {
+        "label": "First Name",
+        "placeholder": "Your First Name"
+      },
+      "surname": {
+        "label": "Last Name",
+        "placeholder": "Your Last Name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "example@email.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Message Subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message here..."
+      },
+      "submit": "Send Message"
+    },
+    "contact": {
+      "email": {
+        "title": "Email",
+        "address1": "info@nejdettut.com",
+        "address2": "kurs@nejdettut.com"
+      },
+      "phone": {
+        "title": "Phone",
+        "number": "+90 5XX XXX XX XX",
+        "hours": "Weekdays 09:00 - 18:00"
+      },
+      "address": {
+        "title": "Address",
+        "description": "Online trainings are accessible from anywhere."
+      }
+    }
+  },
+  "Giris": {
+    "title": "Login",
+    "description": "Log in to your account to access courses and projects",
+    "tabs": {
+      "email": "Email",
+      "kod": "Class Code"
     },
     "email": {
+      "title": "Login with Email",
+      "description": "For high school, university students, and adults",
       "label": "Email",
-      "placeholder": "example@email.com"
+      "placeholder": "example@email.com",
+      "passwordLabel": "Password"
     },
-    "subject": {
-      "label": "Subject",
-      "placeholder": "Message Subject"
+    "kod": {
+      "title": "Login with Class Code",
+      "description": "For primary school students (no email required)",
+      "sinifKoduLabel": "Class Code",
+      "sinifKoduPlaceholder": "E.g. BIL-5A",
+      "sinifKoduInfo": "Enter the code given by your teacher",
+      "ogrenciNoLabel": "Student Number",
+      "ogrenciNoPlaceholder": "E.g. 12",
+      "adSoyadLabel": "Full Name",
+      "adSoyadPlaceholder": "Ahmet Yılmaz",
+      "infoTitle": "Note",
+      "infoText": "This login method is only for primary school students. Get your class code and student number from your teacher."
     },
-    "message": {
-      "label": "Message",
-      "placeholder": "Write your message here..."
+    "buttons": {
+      "login": "Login"
     },
-    "submit": "Send Message"
+    "noAccount": "Don't have an account?",
+    "registerLink": "Sign Up"
   },
-  "contact": {
-    "email": {
-      "title": "Email",
-      "address1": "info@nejdettut.com",
-      "address2": "kurs@nejdettut.com"
-    },
-    "phone": {
-      "title": "Phone",
-      "number": "+90 5XX XXX XX XX",
-      "hours": "Weekdays 09:00 - 18:00"
-    },
-    "address": {
-      "title": "Address",
-      "description": "Online trainings are accessible from anywhere."
-    }
-  }
-}
-"Kurslar": {
-  "title": "Online Courses",
-  "description": "Comprehensive courses I have prepared in Python, artificial intelligence, and web development. Supported by live sessions and recorded video content.",
-  "free": "Free",
-  "studentCount": "students",
-  "livePlusRecorded": "Live + Recorded",
-  "recordedOnly": "Recorded Only",
-  "buttons": {
-    "startNow": "Start Now",
-    "viewDetails": "View Details",
-    "contact": "Get in Touch"
-  },
-  "loginRequired": "Login required to enroll",
-  "questions": {
-    "title": "Have Questions About the Courses?",
-    "description": "Feel free to contact me for information about live sessions, enrollment process, or course content."
-  },
-  "courses": {
-    "pythonTemel": {
-      "title": "Python Basics",
-      "description": "Introduction to Python programming from scratch. Variables, loops, functions, and basic data structures.",
-      "level": "Beginner",
-      "duration": "8 Weeks",
-      "price": "$149"
-    },
-    "pythonIleri": {
-      "title": "Advanced Python",
-      "description": "OOP, file operations, exception handling, modules, and packages.",
-      "level": "Intermediate",
-      "duration": "10 Weeks",
-      "price": "$199"
-    },
-    "aiTemel": {
-      "title": "AI Fundamentals",
-      "description": "Introduction to machine learning, deep learning, and AI applications. Practical projects with Python.",
-      "level": "Advanced",
-      "duration": "12 Weeks",
-      "price": "$249"
-    },
-    "webTemel": {
-      "title": "Web Development Basics",
-      "description": "Creating modern web pages with HTML, CSS, and JavaScript. Responsive design principles.",
-      "level": "Beginner",
-      "duration": "6 Weeks",
-      "price": "Free"
-    }
+  "footer": {
+    "rights": "All rights reserved."
   }
 }
