@@ -109,3 +109,47 @@
     }
   }
 }
+"Iletisim": {
+  "title": "İletişim",
+  "description": "Kurslar, eğitimler veya işbirlikleri hakkında benimle iletişime geçebilirsiniz.",
+  "form": {
+    "title": "Bize Ulaşın",
+    "name": {
+      "label": "Ad",
+      "placeholder": "Adınız"
+    },
+    "surname": {
+      "label": "Soyad",
+      "placeholder": "Soyadınız"
+    },
+    "email": {
+      "label": "E-posta",
+      "placeholder": "ornek@email.com"
+    },
+    "subject": {
+      "label": "Konu",
+      "placeholder": "Mesaj konusu"
+    },
+    "message": {
+      "label": "Mesaj",
+      "placeholder": "Mesajınızı yazın..."
+    },
+    "submit": "Gönder"
+  },
+  "contact": {
+    "email": {
+      "title": "E-posta",
+      "address1": "info@nejdettut.com",
+      "address2": "kurs@nejdettut.com"
+    },
+    "phone": {
+      "title": "Telefon",
+      "number": "+90 5XX XXX XX XX",
+      "hours": "Hafta içi 09:00 - 18:00"
+    },
+    "address": {
+      "title": "Adres",
+      "description": "Online eğitimler için her yerden erişim sağlayabilirsiniz."
+    }
+  }
+}
