@@ -103,3 +103,48 @@
     }
   }
 }
+
+"Iletisim": {
+  "title": "Contact",
+  "description": "Feel free to reach out regarding courses, training sessions, or potential collaborations.",
+  "form": {
+    "title": "Get in Touch",
+    "name": {
+      "label": "First Name",
+      "placeholder": "Your First Name"
+    },
+    "surname": {
+      "label": "Last Name",
+      "placeholder": "Your Last Name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "example@email.com"
+    },
+    "subject": {
+      "label": "Subject",
+      "placeholder": "Message Subject"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Write your message here..."
+    },
+    "submit": "Send Message"
+  },
+  "contact": {
+    "email": {
+      "title": "Email",
+      "address1": "info@nejdettut.com",
+      "address2": "kurs@nejdettut.com"
+    },
+    "phone": {
+      "title": "Phone",
+      "number": "+90 5XX XXX XX XX",
+      "hours": "Weekdays 09:00 - 18:00"
+    },
+    "address": {
+      "title": "Address",
+      "description": "Online trainings are accessible from anywhere."
+    }
+  }
+}
