@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { routing } from '@/navigation';
 
 export function Navbar() {
   const t = useTranslations("nav");
