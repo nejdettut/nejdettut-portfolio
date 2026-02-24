@@ -13,14 +13,7 @@ import Link from 'next/link';
 //  return [{ locale: 'tr' }, { locale: 'en' }];
 //}
 
-// Metadata (async)
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
-  return {
-    title: `Öğrenci Çalışmaları | ${t('title')}`,
-  };
-}
+
 
 const ornekProjeler = [
   {
