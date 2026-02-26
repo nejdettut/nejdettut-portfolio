@@ -1,12 +1,18 @@
+// middleware.ts (kökte)
 import createMiddleware from 'next-intl/middleware';
-import { locales, defaultLocale } from './i18n';
+import { routing } from '@/navigation'; // ← @/ ile navigation.ts
 
+// createMiddleware'e routing objesini doğrudan veriyoruz
 export default createMiddleware({
-  defaultLocale,
-  locales,
-  localePrefix: 'always',
+  locales: routing.locales,
+  defaultLocale: routing.defaultLocale,
+  localePrefix: routing.localePrefix // 'always' korunuyor
 });
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: [
+    // API, statik dosyalar, _next vs. hariç tüm yollar
+    '/((?!api|_next/static|_next/image|favicon.ico|images|public|.*\\..*).*)',
+    '/'
+  ]
 };
