@@ -1,125 +1,123 @@
-import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
-import { Button } from "@/components/ui/button";
-import { Link } from "@/navigation";
-import { ArrowRight, Code, GraduationCap, Users, PlayCircle, BookOpen } from "lucide-react";
+import { getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { ArrowRight, Code, GraduationCap, Users, PlayCircle, BookOpen } from 'lucide-react';
+import Link from '@/navigation'; // dil prefix'li Link
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  return {
-    title: t("title"),
-    description: t("description"),
-  };
-}
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-export default function HomePage() {
-  const t = useTranslations("hero");
-  const quickT = useTranslations("quickAccess");
+  const t = await getTranslations('Home'); // messages/...json'da 'Home' namespace'i
 
   return (
-    <div className="flex flex-col gap-16">
-      <section className="relative py-20 lg:py-32 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              <GraduationCap className="h-4 w-4" />
-              <span>Bilişim Öğretmeni & EdTech Uzmanı</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-              {t("title")}
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t("subtitle")}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link href="/kurslar" className="gap-2">
-                  {t("ctaPrimary")}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/ogrenci-calismalari" className="gap-2">
-                  <PlayCircle className="h-4 w-4" />
-                  {t("ctaSecondary")}
-                </Link>
-              </Button>
-            </div>
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 px-4 text-center">
+        <div className="container mx-auto max-w-5xl">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+            {t('hero.title')}
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10">
+            {t('hero.subtitle')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild className="gap-2">
+              <Link href="/kurslar">
+                {t('hero.ctaPrimary')} <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild className="gap-2">
+              <Link href="/ogrenci-calismalari">
+                {t('hero.ctaSecondary')} <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      <section className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-10">{quickT("title")}</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="group relative overflow-hidden rounded-lg border bg-card p-6 hover:shadow-lg transition-all">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 rounded-lg bg-blue-100 text-blue-600">
-                <Users className="h-6 w-6" />
-              </div>
-              <h3 className="font-semibold text-lg">{quickT("forParents")}</h3>
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              Çocuklarınızın bilişim teknolojileri derslerindeki gelişimini takip edin.
-            </p>
-            <Link href="/dersler" className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1">
-              Dersleri İncele <ArrowRight className="h-3 w-3" />
-            </Link>
-          </div>
+      {/* Hızlı Erişim Kartları */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">{t('quickAccess.title')}</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Veliler İçin */}
+            <Card className="hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Users className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">{t('quickAccess.forParents')}</h3>
+                <p className="text-muted-foreground mb-6">
+                  {t('quickAccess.parentsDesc')}
+                </p>
+                <Button variant="outline" asChild>
+                  <Link href="/dersler">
+                    {t('quickAccess.viewMore')} <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
 
-          <div className="group relative overflow-hidden rounded-lg border bg-card p-6 hover:shadow-lg transition-all">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 rounded-lg bg-orange-100 text-orange-600">
-                <Code className="h-6 w-6" />
-              </div>
-              <h3 className="font-semibold text-lg">{quickT("forStudents")}</h3>
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              Python, AI ve web geliştirme kurslarına kaydolun, projelerinizi paylaşın.
-            </p>
-            <Link href="/kurslar" className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1">
-              Kurslara Göz At <ArrowRight className="h-3 w-3" />
-            </Link>
-          </div>
+            {/* Öğrenciler İçin */}
+            <Card className="hover:shadow-xl transition-all duration-300 border-primary/50">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+                  <GraduationCap className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">{t('quickAccess.forStudents')}</h3>
+                <p className="text-muted-foreground mb-6">
+                  {t('quickAccess.studentsDesc')}
+                </p>
+                <Button asChild>
+                  <Link href="/kurslar">
+                    {t('quickAccess.viewMore')} <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
 
-          <div className="group relative overflow-hidden rounded-lg border bg-card p-6 hover:shadow-lg transition-all">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 rounded-lg bg-green-100 text-green-600">
-                <BookOpen className="h-6 w-6" />
-              </div>
-              <h3 className="font-semibold text-lg">{quickT("forEmployers")}</h3>
-            </div>
-            <p className="text-muted-foreground text-sm mb-4">
-              EdTech projelerimi ve eğitim teknolojileri uzmanlığımı inceleyin.
-            </p>
-            <Link href="/projelerim" className="text-sm font-medium text-primary hover:underline inline-flex items-center gap-1">
-              Projelerimi Gör <ArrowRight className="h-3 w-3" />
-            </Link>
+            {/* İşverenler İçin */}
+            <Card className="hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Briefcase className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">{t('quickAccess.forEmployers')}</h3>
+                <p className="text-muted-foreground mb-6">
+                  {t('quickAccess.employersDesc')}
+                </p>
+                <Button variant="outline" asChild>
+                  <Link href="/iletisim">
+                    {t('quickAccess.viewMore')} <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      <section className="bg-muted/50 py-16">
-        <div className="container mx-auto px-4">
+      {/* İstatistikler */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary">500+</div>
-              <div className="text-sm text-muted-foreground mt-1">Öğrenci</div>
+              <p className="text-5xl font-bold text-primary">500+</p>
+              <p className="text-muted-foreground mt-2">{t('stats.students')}</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary">5+</div>
-              <div className="text-sm text-muted-foreground mt-1">Yıllık Deneyim</div>
+              <p className="text-5xl font-bold text-primary">5+</p>
+              <p className="text-muted-foreground mt-2">{t('stats.years')}</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground mt-1">Öğrenci Projesi</div>
+              <p className="text-5xl font-bold text-primary">50+</p>
+              <p className="text-muted-foreground mt-2">{t('stats.projects')}</p>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary">10+</div>
-              <div className="text-sm text-muted-foreground mt-1">Online Kurs</div>
+              <p className="text-5xl font-bold text-primary">10+</p>
+              <p className="text-muted-foreground mt-2">{t('stats.onlineCourses')}</p>
             </div>
           </div>
         </div>
