@@ -4,7 +4,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, GraduationCap, Briefcase, ArrowRight } from 'lucide-react';
-import Link from '@/navigation';
+import { Link } from '@/navigation';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
