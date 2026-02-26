@@ -15,7 +15,7 @@
     "contact": "İletişim",
     "login": "Giriş Yap"
   },
- "hero": {
+  "hero": {
     "title": "Geleceği Kodlayan Nesiller Yetiştiriyorum",
     "subtitle": "Özel ilkokuldan üniversiteye, her yaş grubuna özel bilişim teknolojileri ve programlama eğitimi",
     "ctaPrimary": "Kursları Keşfet",
@@ -24,20 +24,9 @@
   "quickAccess": {
     "title": "Hızlı Erişim",
     "forParents": "Veliler İçin",
-    "forParentsDesc": "Çocuklarınızın bilişim derslerindeki gelişimini takip edin",
     "forStudents": "Öğrenciler İçin",
-    "forStudentsDesc": "Python, AI ve web kurslarına kaydolun, projelerinizi paylaşın",
-    "forEmployers": "İşverenler İçin",
-    "forEmployersDesc": "EdTech projelerimi ve uzmanlığımı inceleyin",
-    "viewMore": "Daha Fazla Gör"
+    "forEmployers": "İşverenler İçin"
   },
-  "stats": {
-    "students": "Öğrenci",
-    "years": "Yıllık Deneyim",
-    "projects": "Öğrenci Projesi",
-    "onlineCourses": "Online Kurs"
-  }
-},
   "Hakkimda": {
     "name": "Nejdet Tut",
     "title": "Bilişim Teknolojileri Öğretmeni & EdTech Uzmanı Adayı",
