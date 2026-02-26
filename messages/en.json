@@ -183,21 +183,21 @@
         "description": "Introduction to Python programming from scratch. Variables, loops, functions, and basic data structures.",
         "level": "Beginner",
         "duration": "8 Weeks",
-        "price": "$149"
+        "price": "₺1.499"
       },
       "pythonIleri": {
         "title": "Advanced Python",
         "description": "OOP, file operations, exception handling, modules, and packages.",
         "level": "Intermediate",
         "duration": "10 Weeks",
-        "price": "$199"
+        "price": "₺1.999"
       },
       "aiTemel": {
         "title": "AI Fundamentals",
         "description": "Introduction to machine learning, deep learning, and AI applications. Practical projects with Python.",
         "level": "Advanced",
         "duration": "12 Weeks",
-        "price": "$249"
+        "price": "₺2.499"
       },
       "webTemel": {
         "title": "Web Development Basics",
