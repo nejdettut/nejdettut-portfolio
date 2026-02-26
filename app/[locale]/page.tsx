@@ -12,25 +12,25 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const t = await getTranslations('Home');
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-6 lg:px-8 text-center">
-        <div className="mx-auto max-w-5xl">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+    <div className="min-h-screen">
+      {/* Hero */}
+      <section className="py-20 md:py-32 px-4 md:px-8 text-center bg-gradient-to-br from-primary/5 to-background">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             {t('hero.title')}
           </h1>
-          <p className="text-lg md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
             {t('hero.subtitle')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="text-lg px-10 py-6 gap-3 shadow-lg hover:shadow-xl transition-all" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild>
               <Link href="/kurslar">
-                {t('hero.ctaPrimary')} <ArrowRight className="h-6 w-6" />
+                {t('hero.ctaPrimary')} →
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-10 py-6 gap-3" asChild>
+            <Button size="lg" variant="outline" asChild>
               <Link href="/ogrenci-calismalari">
-                {t('hero.ctaSecondary')} <ArrowRight className="h-6 w-6" />
+                {t('hero.ctaSecondary')} →
               </Link>
             </Button>
           </div>
@@ -38,80 +38,50 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* Hızlı Erişim */}
-      <section className="py-16 md:py-24 px-6 lg:px-8 bg-muted/20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">
+      <section className="py-16 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">
             {t('quickAccess.title')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            <Card className="hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Users className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4">{t('quickAccess.forParents')}</h3>
-                <p className="text-muted-foreground mb-6">
-                  Çocuklarınızın bilişim derslerindeki gelişimini takip edin.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="p-6 text-center">
+                <Users className="mx-auto h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{t('quickAccess.forParents')}</h3>
+                <p className="text-muted-foreground mb-4">
+                  Çocuklarınızın gelişimini takip edin.
                 </p>
-                <Button variant="outline" asChild>
+                <Button variant="link" asChild>
                   <Link href="/dersler">Dersleri İncele →</Link>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-all duration-300 border-primary/50">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-                  <GraduationCap className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4">{t('quickAccess.forStudents')}</h3>
-                <p className="text-muted-foreground mb-6">
-                  Python, AI ve web kurslarına kaydolun, projelerinizi paylaşın.
+            <Card>
+              <CardContent className="p-6 text-center">
+                <GraduationCap className="mx-auto h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{t('quickAccess.forStudents')}</h3>
+                <p className="text-muted-foreground mb-4">
+                  Kurslara kaydolun, projelerinizi paylaşın.
                 </p>
-                <Button asChild>
+                <Button variant="link" asChild>
                   <Link href="/kurslar">Kurslara Göz At →</Link>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Briefcase className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4">{t('quickAccess.forEmployers')}</h3>
-                <p className="text-muted-foreground mb-6">
-                  EdTech projelerimi ve uzmanlığımı inceleyin.
+            <Card>
+              <CardContent className="p-6 text-center">
+                <Briefcase className="mx-auto h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{t('quickAccess.forEmployers')}</h3>
+                <p className="text-muted-foreground mb-4">
+                  Uzmanlığımı inceleyin.
                 </p>
-                <Button variant="outline" asChild>
-                  <Link href="/iletisim">Projelerimi Gör →</Link>
+                <Button variant="link" asChild>
+                  <Link href="/iletisim">İletişime Geç →</Link>
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* İstatistikler */}
-      <section className="py-16 md:py-24 px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="text-5xl md:text-6xl font-bold text-primary">500+</p>
-              <p className="text-muted-foreground mt-2">Öğrenci</p>
-            </div>
-            <div>
-              <p className="text-5xl md:text-6xl font-bold text-primary">5+</p>
-              <p className="text-muted-foreground mt-2">Yıllık Deneyim</p>
-            </div>
-            <div>
-              <p className="text-5xl md:text-6xl font-bold text-primary">50+</p>
-              <p className="text-muted-foreground mt-2">Öğrenci Projesi</p>
-            </div>
-            <div>
-              <p className="text-5xl md:text-6xl font-bold text-primary">10+</p>
-              <p className="text-muted-foreground mt-2">Online Kurs</p>
-            </div>
           </div>
         </div>
       </section>
