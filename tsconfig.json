@@ -1,40 +1,69 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    // Hedef JavaScript sürümü (es5 eskiler için güvenli, es2020 modern için daha iyi)
+    "target": "es2020",
+
+    // Tarayıcı ve DOM API'leri için kütüphaneler
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    // JavaScript dosyalarını da derle (opsiyonel ama faydalı)
     "allowJs": true,
+
+    // Tip kontrollerini atla (node_modules hatalarını önler)
     "skipLibCheck": true,
+
+    // En katı tip kontrolü (önerilen)
     "strict": true,
+
+    // Derlenmiş dosyaları emit etme (Next.js kendisi yapıyor)
     "noEmit": true,
+
+    // CommonJS ve ES Module arası uyumluluk
     "esModuleInterop": true,
+
+    // Modern module sistemi
     "module": "esnext",
+
+    // Bundler modunda yol çözümü (Vite, Webpack, Next.js için ideal)
     "moduleResolution": "bundler",
+
+    // JSON dosyalarını import edebilme (messages/tr.json vs. için)
     "resolveJsonModule": true,
+
+    // İzole modüller (Next.js için önerilen)
     "isolatedModules": true,
+
+    // JSX'i React için koru (Next.js kendisi işler)
     "jsx": "preserve",
+
+    // Incremental build hızlandırır
     "incremental": true,
+
+    // Proje kökünden alias tanımlama
     "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+
+    // Next.js plugin'i (otomatik type-safe route'lar vs. için)
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+
+    // Ekstra tip dosyaları (node için process.env vs.)
+    "types": ["node"]
   },
+
+  // Derlenecek dosyalar
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+
+  // Hariç tutulacaklar
+  "exclude": ["node_modules"]
 }
