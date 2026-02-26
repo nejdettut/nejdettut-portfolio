@@ -1,10 +1,9 @@
-// app/[locale]/page.tsx
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, GraduationCap, Briefcase, ArrowRight } from 'lucide-react';
-import { Link } from '@/navigation';
+import { Link } from '@/navigation'; // ← named import (önceki fix'ten)
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -14,7 +13,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
-      {/* Hero - Daha büyük ve ferah */}
+      {/* Hero - Ferah ve büyük */}
       <section className="relative py-24 md:py-40 px-6 lg:px-8 text-center overflow-hidden">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight text-primary">
@@ -24,12 +23,22 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {t('hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button size="xl" className="text-lg px-10 py-6 gap-3 shadow-lg hover:shadow-xl transition-all" asChild>
+            {/* Butonlar – size="lg" + ekstra stil */}
+            <Button 
+              size="lg" 
+              className="text-lg px-10 py-6 gap-3 shadow-lg hover:shadow-xl transition-all" 
+              asChild
+            >
               <Link href="/kurslar">
                 {t('hero.ctaPrimary')} <ArrowRight className="h-6 w-6" />
               </Link>
             </Button>
-            <Button size="xl" variant="outline" className="text-lg px-10 py-6 gap-3" asChild>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-10 py-6 gap-3" 
+              asChild
+            >
               <Link href="/ogrenci-calismalari">
                 {t('hero.ctaSecondary')} <ArrowRight className="h-6 w-6" />
               </Link>
@@ -38,7 +47,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* Hızlı Erişim Kartları - Grid responsive */}
+      {/* Hızlı Erişim Kartları */}
       <section className="py-16 md:py-24 px-6 lg:px-8 bg-muted/20">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16">
@@ -51,7 +60,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-full flex items-center justify-center">
                   <Users className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4">{t('quickAccess.forParents')}</h3>
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+                  {t('quickAccess.forParents')}
+                </h3>
                 <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                   {t('quickAccess.forParentsDesc')}
                 </p>
@@ -69,7 +80,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-full flex items-center justify-center">
                   <GraduationCap className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4">{t('quickAccess.forStudents')}</h3>
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+                  {t('quickAccess.forStudents')}
+                </h3>
                 <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                   {t('quickAccess.forStudentsDesc')}
                 </p>
@@ -87,7 +100,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-full flex items-center justify-center">
                   <Briefcase className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-semibold mb-4">{t('quickAccess.forEmployers')}</h3>
+                <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+                  {t('quickAccess.forEmployers')}
+                </h3>
                 <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                   {t('quickAccess.forEmployersDesc')}
                 </p>
@@ -102,7 +117,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* İstatistikler - Responsive yatay */}
+      {/* İstatistikler */}
       <section className="py-16 md:py-24 px-6 lg:px-8 bg-gradient-to-r from-primary/5 to-secondary/5">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 text-center">
