@@ -1,13 +1,15 @@
 // navigation.ts (proje kökünde)
-import {
-  createLocalizedPathname,
-  createSharedPathnamesNavigation
-} from 'next-intl/navigation';
+import { createSharedPathnamesNavigation } from 'next-intl/navigation';
 
 export const locales = ['tr', 'en'] as const;
-export const localePrefix = 'always'; // veya 'as-needed'
+export const localePrefix = 'always'; // 'as-needed' veya 'never' de olabilir
 export const pathnames = {
   // Özel yollar varsa buraya ekleyin, yoksa boş bırakın
+  '/hakkimda': {
+    tr: '/hakkimda',
+    en: '/about'
+  },
+  // ... diğer sayfalar için ekleyebilirsiniz
 };
 
 export const routing = {
@@ -15,8 +17,8 @@ export const routing = {
   defaultLocale: 'tr' as const,
   localePrefix,
   pathnames
-} satisfies Parameters<typeof createSharedPathnamesNavigation>[0];
+};
 
-// Link ve diğer navigation helper'ları export et (client ve server için)
+// Link, router vs. helper'larını export et (Navbar, Footer vs. için)
 export const { Link, redirect, usePathname, useRouter } =
   createSharedPathnamesNavigation(routing);
