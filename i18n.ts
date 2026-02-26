@@ -1,24 +1,23 @@
 import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
+// ──────────────────────────────────────────────
 export const locales = ['tr', 'en'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale = 'tr';
 
-import { routing } from './routing'; 
+// ──────────────────────────────────────────────
+// routing objesini burada yeniden tanımlama!
+// Dışarıdan gelen routing'i doğrudan kullan
+import { routing } from './routing';
 
-export const routing = {
-  locales: ['tr', 'en'],
-  defaultLocale: 'tr'
-};
-
-
+// ──────────────────────────────────────────────
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
 
-  // Validate
-  if (!routing.locales.includes(locale)) {
-    locale = routing.defaultLocale; // 'tr'
+  // requestLocale string gelebildiği için tip güvenli kontrol
+  if (!locale || !routing.locales.includes(locale as Locale)) {
+    locale = routing.defaultLocale;
   }
 
   return {
